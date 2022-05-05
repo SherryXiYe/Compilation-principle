@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1651778145 source:d:\codeblocks\workspace\gauss_pthread_4\main.cpp
+	<iostream>
+	<nmmintrin.h>
+	<windows.h>
+	<stdlib.h>
+	<pthread.h>
+	<semaphore.h>
+	<immintrin.h>
+	<malloc.h>
+	<stdio.h>
+	<stdint.h>
+
