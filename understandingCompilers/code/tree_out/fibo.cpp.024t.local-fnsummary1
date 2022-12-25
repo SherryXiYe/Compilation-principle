@@ -1,0 +1,201 @@
+
+;; Function myplus (_Z6myplusii, funcdef_no=1522, decl_uid=36328, cgraph_uid=436, symbol_order=439)
+
+
+Analyzing function body size: int myplus(int, int)
+
+IPA function summary for int myplus(int, int)/439
+  global time:     3.000000
+  self size:       4
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:2.000000, time:3.000000
+    size:2.000000, time:0.000000,  executed if:(not inlined)
+  calls:
+
+myplus (int x, int y)
+{
+  int D.39988;
+  int _3;
+
+  <bb 2> :
+  _3 = x_1(D) + y_2(D);
+
+  <bb 3> :
+<L0>:
+  return _3;
+
+}
+
+
+
+;; Function main (main, funcdef_no=1523, decl_uid=36330, cgraph_uid=437, symbol_order=440)
+
+
+Analyzing function body size: int main()
+
+IPA function summary for int main()/440
+  global time:     106.000000
+  self size:       35
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:5.000000, time:6.000000
+    size:2.000000, time:0.000000,  executed if:(not inlined)
+  calls:
+    std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>]/678 function body not available
+      loop depth: 1 freq:1.00 size: 3 time: 12
+    std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]/1083 function body not available
+      loop depth: 1 freq:1.00 size: 4 time: 13
+    int myplus(int, int)/439 function not considered for inlining
+      loop depth: 1 freq:1.00 size: 4 time: 13callee size: 2 stack: 0
+    std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>]/678 function body not available
+      loop depth: 0 freq:1.00 size: 3 time: 12
+    std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]/1083 function body not available
+      loop depth: 0 freq:1.00 size: 4 time: 13
+    std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>]/678 function body not available
+      loop depth: 0 freq:1.00 size: 3 time: 12
+    std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]/1083 function body not available
+      loop depth: 0 freq:1.00 size: 4 time: 13
+    std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(int&) [with _CharT = char; _Traits = std::char_traits<char>]/1081 function body not available
+      loop depth: 0 freq:1.00 size: 3 time: 12
+
+main ()
+{
+  struct basic_ostream & D.39996;
+  struct basic_ostream & D.39995;
+  struct basic_ostream & D.39994;
+  const int add;
+  int t;
+  int i;
+  int b;
+  int a;
+  int D.39992;
+  struct basic_ostream & _1;
+  struct basic_ostream & _2;
+  int globe_n.0_3;
+  struct basic_ostream & _4;
+  struct basic_ostream & _16;
+  struct basic_ostream & _19;
+  struct basic_ostream & _25;
+  int _29;
+
+  <bb 2> :
+  a_9 = 0;
+  b_10 = 1;
+  i_11 = 1;
+  add_12 = 1;
+  std::basic_istream<char>::operator>> (&cin, &globe_n);
+  _16 = std::basic_ostream<char>::operator<< (&cout, a_9);
+  _1 = _16;
+  std::basic_ostream<char>::operator<< (_1, endl);
+  _19 = std::basic_ostream<char>::operator<< (&cout, b_10);
+  _2 = _19;
+  std::basic_ostream<char>::operator<< (_2, endl);
+
+  <bb 3> :
+  # a_5 = PHI <a_9(2), a_27(4)>
+  # b_6 = PHI <b_10(2), b_23(4)>
+  # i_7 = PHI <i_11(2), i_28(4)>
+  globe_n.0_3 = globe_n;
+  if (i_7 >= globe_n.0_3)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 4> :
+  t_21 = b_6;
+  b_23 = myplus (a_5, b_6);
+  _25 = std::basic_ostream<char>::operator<< (&cout, b_23);
+  _4 = _25;
+  std::basic_ostream<char>::operator<< (_4, endl);
+  a_27 = t_21;
+  i_28 = i_7 + 1;
+  goto <bb 3>; [INV]
+
+  <bb 5> :
+  _29 = 0;
+
+  <bb 6> :
+<L3>:
+  return _29;
+
+}
+
+
+
+;; Function __static_initialization_and_destruction_0 (_Z41__static_initialization_and_destruction_0ii, funcdef_no=2009, decl_uid=39980, cgraph_uid=923, symbol_order=950)
+
+
+Analyzing function body size: void __static_initialization_and_destruction_0(int, int)
+
+IPA function summary for void __static_initialization_and_destruction_0(int, int)/950
+  global time:     30.000000
+  self size:       13
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:5.000000, time:6.000000
+    size:2.000000, time:0.000000,  executed if:(not inlined)
+  calls:
+    int __cxa_atexit(void (*)(void*), void*, void*)/1086 function body not available
+      loop depth: 0 freq:1.00 size: 4 time: 13
+    std::ios_base::Init::Init()/1085 function body not available
+      loop depth: 0 freq:1.00 size: 2 time: 11
+
+__static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  <bb 2> :
+  if (__initialize_p_2(D) == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  if (__priority_4(D) == 65535)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+
+  <bb 5> :
+  return;
+
+}
+
+
+
+;; Function _GLOBAL__sub_I_globe_n (_GLOBAL__sub_I_globe_n, funcdef_no=2010, decl_uid=39986, cgraph_uid=924, symbol_order=1080)
+
+
+Analyzing function body size: (static initializers for fibo.cpp)
+
+IPA function summary for (static initializers for fibo.cpp)/1080
+  global time:     14.000000
+  self size:       6
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:1.000000, time:2.000000
+    size:2.000000, time:0.000000,  executed if:(not inlined)
+  calls:
+    void __static_initialization_and_destruction_0(int, int)/950 function not considered for inlining
+      loop depth: 0 freq:1.00 size: 3 time: 12callee size: 6 stack: 0
+
+_GLOBAL__sub_I_globe_n ()
+{
+  <bb 2> :
+  __static_initialization_and_destruction_0 (1, 65535);
+  return;
+
+}
+
+

@@ -1,0 +1,123 @@
+
+;; Function myplus (_Z6myplusii, funcdef_no=1522, decl_uid=36328, cgraph_uid=436, symbol_order=439)
+
+myplus (int x, int y)
+{
+  int D.39988;
+  int _3;
+
+  <bb 2> :
+  _3 = x_1(D) + y_2(D);
+
+  <bb 3> :
+<L0>:
+  return _3;
+
+}
+
+
+
+;; Function main (main, funcdef_no=1523, decl_uid=36330, cgraph_uid=437, symbol_order=440)
+
+main ()
+{
+  struct basic_ostream & D.39996;
+  struct basic_ostream & D.39995;
+  struct basic_ostream & D.39994;
+  const int add;
+  int t;
+  int i;
+  int b;
+  int a;
+  int D.39992;
+  struct basic_ostream & _1;
+  struct basic_ostream & _2;
+  int globe_n.0_3;
+  struct basic_ostream & _4;
+  struct basic_ostream & _16;
+  struct basic_ostream & _19;
+  struct basic_ostream & _25;
+  int _29;
+
+  <bb 2> :
+  a_9 = 0;
+  b_10 = 1;
+  i_11 = 1;
+  add_12 = 1;
+  std::basic_istream<char>::operator>> (&cin, &globe_n);
+  _16 = std::basic_ostream<char>::operator<< (&cout, a_9);
+  _1 = _16;
+  std::basic_ostream<char>::operator<< (_1, endl);
+  _19 = std::basic_ostream<char>::operator<< (&cout, b_10);
+  _2 = _19;
+  std::basic_ostream<char>::operator<< (_2, endl);
+
+  <bb 3> :
+  # a_5 = PHI <a_9(2), a_27(4)>
+  # b_6 = PHI <b_10(2), b_23(4)>
+  # i_7 = PHI <i_11(2), i_28(4)>
+  globe_n.0_3 = globe_n;
+  if (i_7 >= globe_n.0_3)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 4> :
+  t_21 = b_6;
+  b_23 = myplus (a_5, b_6);
+  _25 = std::basic_ostream<char>::operator<< (&cout, b_23);
+  _4 = _25;
+  std::basic_ostream<char>::operator<< (_4, endl);
+  a_27 = t_21;
+  i_28 = i_7 + 1;
+  goto <bb 3>; [INV]
+
+  <bb 5> :
+  _29 = 0;
+
+  <bb 6> :
+<L3>:
+  return _29;
+
+}
+
+
+
+;; Function __static_initialization_and_destruction_0 (_Z41__static_initialization_and_destruction_0ii, funcdef_no=2009, decl_uid=39980, cgraph_uid=923, symbol_order=950)
+
+__static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  <bb 2> :
+  if (__initialize_p_2(D) == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  if (__priority_4(D) == 65535)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+
+  <bb 5> :
+  return;
+
+}
+
+
+
+;; Function _GLOBAL__sub_I_globe_n (_GLOBAL__sub_I_globe_n, funcdef_no=2010, decl_uid=39986, cgraph_uid=924, symbol_order=1080)
+
+_GLOBAL__sub_I_globe_n ()
+{
+  <bb 2> :
+  __static_initialization_and_destruction_0 (1, 65535);
+  return;
+
+}
+
+
